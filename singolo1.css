@@ -96,7 +96,7 @@ span {
   color: #494e62;
 }
 
-/*SIDEBAR*/
+/*SLIDER*/
 
 .slider {
   background-color: #f06c64;
@@ -158,7 +158,7 @@ span {
 
 .services__header h2 {
   font-family: "Lato-Bold", "Helvetica", sans-serif;
-  font-size: 30px;
+  font-size: 3.0em;
   line-height: 23px;
   color: #666d89;
   font-weight: 900;
@@ -168,7 +168,7 @@ span {
 
 .services__header p {
   font-family: "Lato-Light", "Helvetica", sans-serif;
-  font-size: 18px;
+  font-size: 1.8em;
   line-height: 30px;
   color: #767e9e;
   font-weight: 300;
@@ -197,7 +197,7 @@ span {
 
 .services__description__item h3 {
   font-family: "Lato-Bold", "Helvetica", sans-serif;
-  font-size: 18px;
+  font-size: 1.8em;
   line-height: 18px;
   color: #666d89;
   font-weight: 900;
@@ -208,7 +208,7 @@ span {
 
 .services__description__item p {
   font-family: "Lato-Regular", "Helvetica", sans-serif;
-  font-size: 12px;
+  font-size: 1.2em;
   line-height: 22px;
   color: #767e9e;
   font-weight: 400;
