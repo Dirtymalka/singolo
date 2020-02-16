@@ -1,91 +1,177 @@
 @font-face {
-    font-family: "Lato-Regular";
-    src: url("./assets/Lato-Regular.ttf");
-    font-style: normal;
-    font-weight: normal;
-  }
-  
-  @font-face {
-    font-family: "Lato-Bold";
-    src: url("./assets/Lato-Bold.ttf");
-    font-style: normal;
-    font-weight: normal;
-  }
-  
-  @font-face {
-    font-family: "Lato-Light";
-    src: url("./assets/Lato-Light.ttf");
-    font-style: normal;
-    font-weight: normal;
-  }
+  font-family: "Lato-Regular";
+  src: url("./assets/Lato-Regular.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("./assets/Lato-Bold.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Lato-Light";
+  src: url("./assets/Lato-Light.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
 
 * {
-    margin: 0;
+  margin: 0;
 }
 
 html {
-    font-size: 10px;
+  font-size: 10px;
 }
 
+/*HEADER*/
+
 .header {
-    background-color: #2d303a;
-    border-bottom: 6px #323746 solid;
-    color: white;
+  background-color: #2d303a;
+  border-bottom: 6px #323746 solid;
+  color: white;
 }
 
 .wrapper {
-    max-width: 1020px;
-    margin: 0 auto;
+  max-width: 1020px;
+  margin: 0 auto;
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 34px 40px 33px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 34px 40px 33px 40px;
 }
 
 h1 {
-    font-family: "Lato-Bold", "Helvetica", sans-serif;
-    font-size: 2.5rem;
-    color: #ffffff;
-    font-weight: 700;
-    text-align: left;
-    line-height: 19px;
-    letter-spacing: -0.02em;
+  font-family: "Lato-Bold", "Helvetica", sans-serif;
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: left;
+  line-height: 19px;
+  letter-spacing: -0.02em;
 }
 
 span {
-    color: #f06c64;
-    line-height: 20px;
+  color: #f06c64;
+  line-height: 20px;
 }
 
 .navigation {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navigation li a {
-    color: white;
-    font-size: 12px;
-    font-family: "Lato", "Helvetica", sans-serif;
-    font-weight: 700;
-    text-align: left;
-    text-decoration: none;
-    line-height: 9px;
-    letter-spacing: -0.02em;
+  color: white;
+  font-size: 1.2rem;
+  font-family: "Lato", "Helvetica", sans-serif;
+  font-weight: 700;
+  text-align: left;
+  text-decoration: none;
+  line-height: 9px;
+  letter-spacing: -0.02em;
+}
+
+.navigation li a:hover {
+  color: #f06c64;
 }
 
 .navigation li {
-    margin-left: 30px;
-    position: relative;
-    list-style-type: none;
-  }
-  
-.navigation li + li::before {
-    position: absolute;
-    bottom: 3px;
-    left: -16px;
-    content: ".";
-    color: #494e62;
-  }
+  margin-left: 30px;
+  position: relative;
+  list-style-type: none;
+}
+
+.navigation li+li::before {
+  position: absolute;
+  bottom: 3px;
+  left: -16px;
+  content: ".";
+  color: #494e62;
+}
+
+/*SIDEBAR*/
+
+.slider {
+  background-color: #f06c64;
+  border-bottom: 6px #ea676b solid;
+}
+
+.slider-container {
+  padding: 53px 40px 58px 40px;
+}
+
+.slider__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider__content button {
+  padding: 0;
+  border: 0;
+  background-color: #f06c64;
+}
+
+.vertical-phone {
+  padding-right: 18px;
+}
+
+.slider__content a {
+  display: block;
+  width: 16px;
+  height: 27px;
+}
+
+.right a {
+  background-image: url(./assets/img/arrow-right.png);
+}
+
+.right a:hover {
+  background-image: url(./assets/img/arrow-right-hover.png);
+}
+
+.left a {
+  background-image: url(./assets/img/arrow-left.png);
+}
+
+.left a:hover {
+  background-image: url(./assets/img/arrow-left-hover.png);
+}
+
+/*SERVICES*/
+
+.services {
+  background-color: #f2f2f2;
+  border-bottom: 6px #ffffff solid;
+}
+
+.services__header {
+  padding: 66px 40px 52px 40px;
+}
+
+.services__header h2 {
+  font-family: "Lato-Bold", "Helvetica", sans-serif;
+  font-size: 30px;
+  line-height: 23px;
+  color: #666d89;
+  font-weight: 900;
+  text-align: left;
+  padding-bottom: 25px;
+}
+
+.services__header p {
+  font-family: "Lato-Light", "Helvetica", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #767e9e;
+  font-weight: 300;
+  text-align: left;
+  letter-spacing: -0.001em;
+}
