@@ -49,7 +49,7 @@ html {
   font-size: 2.5rem;
   color: #ffffff;
   font-weight: 700;
-  text-align: left;
+  text-align: justify;
   line-height: 19px;
   letter-spacing: -0.02em;
 }
@@ -69,7 +69,7 @@ html {
   font-size: 1.2rem;
   font-family: "Lato", "Helvetica", sans-serif;
   font-weight: 300;
-  text-align: left;
+  text-align: justify;
   text-decoration: none;
   line-height: 9px;
   letter-spacing: -0.02em;
@@ -133,26 +133,26 @@ html {
   bottom: 286px;
 }
 
-.slider-container button a {
-  display: block;
+.right-arrow {
+  background-image: url(./assets/img/arrow-right.png);
   width: 16px;
   height: 27px;
 }
 
-.right-arrow a {
-  background-image: url(./assets/img/arrow-right.png);
-}
-
-.right-arrow a:hover {
+.right-arrow:hover {
   background-image: url(./assets/img/arrow-right-hover.png);
+  cursor: pointer;
 }
 
-.left-arrow a {
+.left-arrow {
   background-image: url(./assets/img/arrow-left.png);
+  width: 16px;
+  height: 27px;
 }
 
-.left-arrow a:hover {
+.left-arrow:hover {
   background-image: url(./assets/img/arrow-left-hover.png);
+  cursor: pointer;
 }
 
 /*SERVICES*/
