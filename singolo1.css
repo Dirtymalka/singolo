@@ -29,12 +29,6 @@ html {
 
 /*HEADER*/
 
-.header {
-  background-color: #2d303a;
-  border-bottom: 6px #323746 solid;
-  color: white;
-}
-
 .wrapper {
   max-width: 1020px;
   margin: 0 auto;
@@ -45,9 +39,12 @@ html {
   justify-content: space-between;
   align-items: baseline;
   padding: 34px 40px 33px 40px;
+  background-color: #2d303a;
+  border-bottom: 6px #323746 solid;
+  color: white;
 }
 
-h1 {
+.logo-container h1 {
   font-family: "Lato-Bold", "Helvetica", sans-serif;
   font-size: 2.5rem;
   color: #ffffff;
@@ -57,38 +54,38 @@ h1 {
   letter-spacing: -0.02em;
 }
 
-span {
+.logo-container h1 span {
   color: #f06c64;
   line-height: 20px;
 }
 
-.navigation {
+.header__navigation .navigation {
   display: flex;
   justify-content: space-between;
 }
 
-.navigation li a {
+.header__navigation .navigation li a {
   color: white;
   font-size: 1.2rem;
   font-family: "Lato", "Helvetica", sans-serif;
-  font-weight: 700;
+  font-weight: 300;
   text-align: left;
   text-decoration: none;
   line-height: 9px;
   letter-spacing: -0.02em;
 }
 
-.navigation li a:hover {
+.header__navigation .navigation li a:hover {
   color: #f06c64;
 }
 
-.navigation li {
+.header__navigation .navigation li {
   margin-left: 30px;
   position: relative;
   list-style-type: none;
 }
 
-.navigation li+li::before {
+.header__navigation .navigation li+li::before {
   position: absolute;
   bottom: 3px;
   left: -16px;
@@ -98,62 +95,75 @@ span {
 
 /*SLIDER*/
 
-.slider {
-  background-color: #f06c64;
-  border-bottom: 6px #ea676b solid;
-}
-
 .slider-container {
   padding: 53px 40px 58px 40px;
+  position: relative;
+  background-color: #f06c64;
+  border-bottom: 6px #ea676b solid;
 }
 
 .slider__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
+  padding-right: 71px;
+  padding-left: 72px;
 }
 
-.slider__content button {
+.horizontal-phone {
+  padding-bottom: 1px;
+}
+
+.slider-container .left-arrow {
   padding: 0;
   border: 0;
   background-color: #f06c64;
+  position: absolute;
+  top: 281px;
+  left: 42px;
 }
 
-.vertical-phone {
-  padding-right: 18px;
+.slider-container .right-arrow {
+  padding: 0;
+  border: 0;
+  background-color: #f06c64;
+  position: absolute;
+  right: 40px;
+  bottom: 286px;
 }
 
-.slider__content a {
+.slider-container button a {
   display: block;
   width: 16px;
   height: 27px;
 }
 
-.right a {
+.right-arrow a {
   background-image: url(./assets/img/arrow-right.png);
 }
 
-.right a:hover {
+.right-arrow a:hover {
   background-image: url(./assets/img/arrow-right-hover.png);
 }
 
-.left a {
+.left-arrow a {
   background-image: url(./assets/img/arrow-left.png);
 }
 
-.left a:hover {
+.left-arrow a:hover {
   background-image: url(./assets/img/arrow-left-hover.png);
 }
 
 /*SERVICES*/
 
-.services {
+.services-container {
   background-color: #f2f2f2;
   border-bottom: 6px #ffffff solid;
 }
 
 .services__header {
-  padding: 66px 40px 45px 40px;
+  padding: 66px 40px 46px 40px;
 }
 
 .services__header h2 {
@@ -163,7 +173,7 @@ span {
   color: #666d89;
   font-weight: 900;
   text-align: left;
-  padding-bottom: 25px;
+  padding-bottom: 24px;
 }
 
 .services__header p {
@@ -172,19 +182,22 @@ span {
   line-height: 30px;
   color: #767e9e;
   font-weight: 300;
-  text-align: left;
-  letter-spacing: -0.001em;
+  text-align: justify;
 }
 
-.services__desriptions {
+.services__descriptions {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 20px 29px 40px;
+  padding: 0 21px 29px 41px;
+}
+
+.services__descriptions li {
+  list-style-type: none;
 }
 
 .services__description__item {
   width: 300px;
-  padding-right: 20px;
+  padding-right: 19px;
   padding-bottom: 30px;
 }
 
@@ -201,8 +214,7 @@ span {
   line-height: 18px;
   color: #666d89;
   font-weight: 900;
-  text-align: left;
-  letter-spacing: -0.01em;
+  text-align: justify;
   padding-bottom: 9px;
 }
 
@@ -212,14 +224,21 @@ span {
   line-height: 22px;
   color: #767e9e;
   font-weight: 400;
-  text-align: left;
-  letter-spacing: 0.002em;
+  text-align: justify;
 }
 
-.services__desriptions img {
+.services__descriptions img {
   float: left;
-  padding-right: 21px;
+  padding-right: 20px;
   padding-bottom: 15px;
   width: 60px;
   height: 60px;
+}
+
+.services__descriptions :nth-child(3) img {
+  padding-right: 22px;
+}
+
+.services__descriptions :nth-child(6) img {
+  padding-right: 22px;
 }
