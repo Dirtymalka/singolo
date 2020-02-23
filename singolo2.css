@@ -101,7 +101,6 @@ html {
 .portfolio__list :nth-child(2) button {
     padding-right: 6px;
     letter-spacing: -0.01em;
-    
 }
 
 .portfolio__list :nth-child(3) button {
@@ -198,3 +197,87 @@ html {
     left: -36px;
 }
 
+/*ABOUT US*/
+
+.about-us__container {
+    background-color: #f2f2f2;
+    padding: 66px 40px 65px 40px;
+    border-bottom: 6px #ffffff solid;
+}
+
+.about-us__header_head {
+    padding-bottom: 25px;
+    font-size: 3.0rem;
+    line-height: 23px;
+    color: #666d89;
+    font-family: "Lato", "Helvetica", sans-serif;
+    font-weight: 900;
+    text-align: justify;
+}
+
+.about-us__header_text {
+    font-size: 1.8rem;
+    line-height: 30px;
+    color: #767e9e;
+    font-family: "Lato-Light", "Helvetica", sans-serif;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.about-us__header {
+    padding-bottom: 45px;
+}
+
+.about-us__people {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-us__people :nth-child(2) {
+    padding-right: 2px;
+}
+
+.human {
+    width: 300px;
+}
+
+.human h2 {
+    margin-left: -1px;
+    letter-spacing: -0.01em;
+    padding-bottom: 12px;
+    font-size: 1.8rem;
+    line-height: 15px;
+    color: #666d89;
+    font-family: "Lato", "Helvetica", sans-serif;
+    font-weight: 900;
+    text-align: justify;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.human p {
+    padding-bottom: 23px;
+    font-size: 1.2rem;
+    line-height: 21px;
+    color: #767e9e;
+    font-family: "Lato-Regular", "Helvetica", sans-serif;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.social {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.social img {
+    padding-right: 6px;
+}
+
+.social :nth-child(2) {
+    padding-right: 6px;
+}
+
+.human div {
+    padding-bottom: 16px;
+}
