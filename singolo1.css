@@ -225,6 +225,7 @@ html {
   color: #767e9e;
   font-weight: 400;
   text-align: justify;
+  overflow: hidden;
 }
 
 .services__descriptions img {
