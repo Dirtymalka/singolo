@@ -110,7 +110,7 @@ html {
 }
 
 .portfolio__list :nth-child(4) button {
-    padding-right: 6px;
+    padding-right: 5px;
     letter-spacing: -0.03em;
     padding-left: 5px;
 }
@@ -118,6 +118,8 @@ html {
 .portfolio__images {
     display: flex;
     flex-wrap: wrap;
+    max-height: 621px;
+    overflow: hidden;
 }
 
 .portfolio__images div {
@@ -201,7 +203,7 @@ html {
 
 .about-us__container {
     background-color: #f2f2f2;
-    padding: 66px 40px 65px 40px;
+    padding: 66px 40px 51px 40px;
     border-bottom: 6px #ffffff solid;
 }
 
@@ -213,6 +215,7 @@ html {
     font-family: "Lato", "Helvetica", sans-serif;
     font-weight: 900;
     text-align: justify;
+    letter-spacing: -0.01em;
 }
 
 .about-us__header_text {
@@ -233,7 +236,7 @@ html {
     justify-content: space-between;
 }
 
-.about-us__people :nth-child(2) {
+.desmond-miles {
     padding-right: 2px;
 }
 
@@ -241,10 +244,13 @@ html {
     width: 300px;
 }
 
+.human div {
+    padding-bottom: 15px;
+}
+
 .human h2 {
     margin-left: -1px;
-    letter-spacing: -0.01em;
-    padding-bottom: 12px;
+    padding-bottom: 13px;
     font-size: 1.8rem;
     line-height: 15px;
     color: #666d89;
@@ -256,7 +262,7 @@ html {
 }
 
 .human p {
-    padding-bottom: 23px;
+    padding-bottom: 22px;
     font-size: 1.2rem;
     line-height: 21px;
     color: #767e9e;
@@ -270,14 +276,54 @@ html {
     justify-content: flex-start;
 }
 
-.social img {
+.social a {
     padding-right: 6px;
 }
 
-.social :nth-child(2) {
-    padding-right: 6px;
+.scolara-visari .social {
+    margin-left: -1px;
 }
 
-.human div {
-    padding-bottom: 16px;
+.facebook {
+    width: 34px;
+    height: 34px;
+    background-image: url(./assets/img/Facebook.png);
+    background-repeat: no-repeat;
+}
+
+.facebook:hover {
+    background-image: url(./assets/img/Facebook_active.svg);
+}
+
+.google {
+    width: 34px;
+    height: 34px;
+    background-image: url(./assets/img/Google.png);
+    background-repeat: no-repeat;
+}
+
+.google:hover {
+    background-image: url(./assets/img/Google_active.svg);
+}
+
+.twitter {
+    width: 34px;
+    height: 34px;
+    background-image: url(./assets/img/Twitter.png);
+    background-repeat: no-repeat;
+}
+
+.twitter:hover {
+    background-image: url(./assets/img/Twitter_active.svg);
+}
+
+.linked-in {
+    width: 34px;
+    height: 34px;
+    background-image: url(./assets/img/LinkedIn.png);
+    background-repeat: no-repeat;
+}
+
+.linked-in:hover {
+    background-image: url(./assets/img/LinkedIn_active.svg);
 }
