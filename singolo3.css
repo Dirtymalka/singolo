@@ -92,6 +92,10 @@ html {
     color:#f48c8f;
 }
 
+.form textarea::placeholder {
+    color:#f48c8f;
+}
+
 .form #project-description {
     height: 195px;
     padding-top: 7px;
@@ -99,8 +103,9 @@ html {
 }
 
 .form .form_submit {
-    width: 53px;
-    height: 24px;
+    width: initial;
+    height: initial;
+    text-indent: initial;
     border: 1px solid #982c2c;
     margin-bottom: 0;
 }
