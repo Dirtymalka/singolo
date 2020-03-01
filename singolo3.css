@@ -63,7 +63,6 @@ html {
     font-family: "Lato-Light", "Helvetica", sans-serif;
     font-weight: 300;
     text-align: justify;
-    margin-left: 1px;
 }
 
 .get-a-quote__forms-contact-info {
@@ -87,6 +86,10 @@ html {
     font-weight: 400;
     text-align: justify;
     text-indent: 15px;
+}
+
+.form input::placeholder {
+    color:#f48c8f;
 }
 
 .form #project-description {
@@ -178,4 +181,74 @@ html {
 
 .contact-info .mail:hover {
     background-image: url(./assets/img/mail-active.png);
+}
+
+/*FOOTER*/
+
+.footer__container {
+    background-color: #2d303a;
+    color: white;
+    padding: 21px 40px 22px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    margin-left: 2px;
+    margin-top: 3px;
+}
+
+.footer__container_social {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer__container_social a {
+    padding-right: 8px;
+}
+
+.facebook {
+    width: 32px;
+    height: 34px;
+    background-image: url(./assets/img/Facebook.png);
+    background-repeat: no-repeat;
+}
+
+.facebook:hover {
+    background-image: url(./assets/img/Facebook_active.svg);
+}
+
+.google {
+    width: 32px;
+    height: 34px;
+    background-image: url(./assets/img/Google.png);
+    background-repeat: no-repeat;
+}
+
+.google:hover {
+    background-image: url(./assets/img/Google_active.svg);
+}
+
+.twitter {
+    width: 32px;
+    height: 34px;
+    background-image: url(./assets/img/Twitter.png);
+    background-repeat: no-repeat;
+}
+
+.twitter:hover {
+    background-image: url(./assets/img/Twitter_active.svg);
+}
+
+.footer__container_social .linked-in {
+    width: 33px;
+    height: 34px;
+    background-image: url(./assets/img/LinkedIn.png);
+    background-repeat: no-repeat;
+    padding-right: 0;
+}
+
+.linked-in:hover {
+    background-image: url(./assets/img/LinkedIn_active.svg);
 }
