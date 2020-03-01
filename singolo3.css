@@ -1,0 +1,181 @@
+@font-face {
+    font-family: "Lato-Regular";
+    src: url("./assets/Lato-Regular.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Lato-Bold";
+    src: url("./assets/Lato-Bold.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Lato-Light";
+    src: url("./assets/Lato-Light.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+/*GET A QOUTE*/
+
+.wrapper {
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.get-a-quote__container {
+    background-color: #f06c64;
+    color: white;
+    padding: 64px 40px 25px 40px;
+    border-bottom: 6px #ea676b solid;
+}
+
+.get-a-quote__text {
+    padding-bottom: 44px;
+}
+
+.get-a-quote__text_header {
+    padding-bottom: 23px;
+    font-size: 3.0rem;
+    line-height: 26px;
+    color: #f0d8d9;
+    font-family: "Lato", "Helvetica", sans-serif;
+    font-weight: 900;
+    text-align: justify;
+    letter-spacing: -0.007em;
+}
+
+.get-a-quote__text_main-text {
+    font-size: 1.8rem;
+    line-height: 30px;
+    color: #f0d8d9;
+    font-family: "Lato-Light", "Helvetica", sans-serif;
+    font-weight: 300;
+    text-align: justify;
+    margin-left: 1px;
+}
+
+.get-a-quote__forms-contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form input, textarea {
+    padding: 0;
+    width: 619px;
+    height: 38px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #d6564f;
+    margin-bottom: 16px;
+    font-size: 1.2rem;
+    line-height: 22px;
+    color: #f48c8f;
+    font-family: "Lato-Regular", "Helvetica", sans-serif;
+    font-weight: 400;
+    text-align: justify;
+    text-indent: 15px;
+}
+
+.form #project-description {
+    height: 195px;
+    padding-top: 7px;
+    text-indent: 15px;
+}
+
+.form .form_submit {
+    width: 53px;
+    height: 24px;
+    border: 1px solid #982c2c;
+    margin-bottom: 0;
+}
+
+.form .form_submit:hover {
+    cursor: pointer;
+}
+
+.forms {
+    padding-right: 21px;
+}
+
+.contact-info__header {
+    font-size: 1.8rem;
+    line-height: 19px;
+    color: #f0d8d9;
+    font-family: "Lato", "Helvetica", sans-serif;
+    font-weight: 900;
+    text-align: justify;
+    letter-spacing: -0.007em;
+    padding-bottom: 9px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    line-height: 22px;
+    color: #f0d8d9;
+    font-family: "Lato-Regular", "Helvetica", sans-serif;
+    font-weight: 400;
+    text-align: justify;
+    padding-bottom: 25px;
+    word-spacing: -0.1em;
+    letter-spacing: -0.01em;
+}
+
+.contact-info a {
+    display: block;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 11px;
+    color: #f0d8d9;
+    font-family: "Lato-Regular", "Helvetica", sans-serif;
+    font-weight: 400;
+    text-align: justify;
+    padding-left: 23px;
+    background-position: center left;
+}
+
+.contact-info .location {
+    background-image: url(./assets/img/location.png);
+    margin-left: 3px;
+    padding-left: 20px;
+    margin-bottom: 11px;
+}
+
+.contact-info .phone {
+    background-image: url(./assets/img/phone-small.png);
+    margin-top: -1px;
+    margin-left: 1px;
+    margin-bottom: 11px;
+    padding-left: 22px;
+}
+
+.contact-info .mail {
+    background-image: url(./assets/img/mail.png);
+    margin-top: 2px;
+    background-position: bottom left;
+}
+
+.contact-info .location:hover {
+    background-image: url(./assets/img/location-active.png);
+}
+
+.contact-info .phone:hover {
+    background-image: url(./assets/img/phone-active.png);
+}
+
+.contact-info .mail:hover {
+    background-image: url(./assets/img/mail-active.png);
+}
