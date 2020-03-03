@@ -213,36 +213,36 @@ html {
     padding-right: 8px;
 }
 
-.facebook {
+.footer__container_social .facebook {
     width: 32px;
     height: 34px;
     background-image: url(./assets/img/Facebook.png);
     background-repeat: no-repeat;
 }
 
-.facebook:hover {
+.footer__container_social .facebook:hover {
     background-image: url(./assets/img/Facebook_active.svg);
 }
 
-.google {
+.footer__container_social .google {
     width: 32px;
     height: 34px;
     background-image: url(./assets/img/Google.png);
     background-repeat: no-repeat;
 }
 
-.google:hover {
+.footer__container_social .google:hover {
     background-image: url(./assets/img/Google_active.svg);
 }
 
-.twitter {
+.footer__container_social .twitter {
     width: 32px;
     height: 34px;
     background-image: url(./assets/img/Twitter.png);
     background-repeat: no-repeat;
 }
 
-.twitter:hover {
+.footer__container_social .twitter:hover {
     background-image: url(./assets/img/Twitter_active.svg);
 }
 
@@ -254,6 +254,6 @@ html {
     padding-right: 0;
 }
 
-.linked-in:hover {
+.footer__container_social .linked-in:hover {
     background-image: url(./assets/img/LinkedIn_active.svg);
 }
