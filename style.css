@@ -107,8 +107,7 @@ html {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    padding-right: 71px;
-    padding-left: 72px;
+    margin: 0 71px 0 72px;
 }
 
 .horizontal-phone {
@@ -173,7 +172,7 @@ html {
     color: #666d89;
     font-weight: 900;
     text-align: left;
-    padding-bottom: 24px;
+    margin-bottom: 24px;
 }
 
 .services__header p {
@@ -188,7 +187,8 @@ html {
 .services__descriptions {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 21px 29px 41px;
+    margin: 0 21px 29px 41px;
+    padding: 0;
 }
 
 .services__descriptions li {
@@ -197,8 +197,7 @@ html {
 
 .services__description__item {
     width: 300px;
-    padding-right: 19px;
-    padding-bottom: 30px;
+    margin: 0 19px 30px 0;
 }
 
 .services__description__item::after {
@@ -226,6 +225,7 @@ html {
     font-weight: 400;
     text-align: justify;
     overflow: hidden;
+    max-height: 66px;
 }
 
 .services__descriptions img {
@@ -259,7 +259,7 @@ html {
 }
 
 .portfolio__header_head {
-    padding-bottom: 31px;
+    margin-bottom: 31px;
     font-size: 3.0rem;
     line-height: 24px;
     color: #666d89;
@@ -281,20 +281,18 @@ html {
 .portfolio__list {
     display: flex;
     justify-content: start;
-    padding-left: 0;
-    padding-top: 18px;
-    padding-bottom: 19px;
-    padding-left: 1px;
+    margin: 18px 0 19px 1px;
+    padding: 0;
 }
 
 .portfolio__list li {
     list-style-type: none;
-    padding-right: 10px;
+    margin-right: 10px;
 }
 
 .portfolio__list_button {
     font-size: 1.2rem;
-    line-height: 9px;
+    line-height: 8px;
     color: #767e9e;
     font-family: "Lato", "Helvetica", sans-serif;
     font-weight: 300;
@@ -420,12 +418,12 @@ html {
 
 .about-us__container {
     background-color: #f2f2f2;
-    padding: 66px 40px 51px 40px;
+    padding: 66px 40px 50px 40px;
     border-bottom: 6px #ffffff solid;
 }
 
 .about-us__header_head {
-    padding-bottom: 25px;
+    margin-bottom: 25px;
     font-size: 3.0rem;
     line-height: 23px;
     color: #666d89;
@@ -445,7 +443,7 @@ html {
 }
 
 .about-us__header {
-    padding-bottom: 45px;
+    margin-bottom: 45px;
 }
 
 .about-us__people {
@@ -454,7 +452,7 @@ html {
 }
 
 .desmond-miles {
-    padding-right: 2px;
+    margin-right: 2px;
 }
 
 .human {
@@ -462,12 +460,11 @@ html {
 }
 
 .human div {
-    padding-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 .human h2 {
-    margin-left: -1px;
-    padding-bottom: 13px;
+    margin: 0 0 12px -1px;
     font-size: 1.8rem;
     line-height: 15px;
     color: #666d89;
@@ -479,7 +476,7 @@ html {
 }
 
 .human p {
-    padding-bottom: 22px;
+    margin-bottom: 22px;
     font-size: 1.2rem;
     line-height: 21px;
     color: #767e9e;
@@ -494,7 +491,7 @@ html {
 }
 
 .social a {
-    padding-right: 6px;
+    margin-right: 6px;
 }
 
 .scolara-visari .social {
@@ -560,11 +557,11 @@ html {
 }
 
 .get-a-quote__text {
-    padding-bottom: 44px;
+    margin-bottom: 44px;
 }
 
 .get-a-quote__text_header {
-    padding-bottom: 23px;
+    margin-bottom: 23px;
     font-size: 3.0rem;
     line-height: 26px;
     color: #f0d8d9;
@@ -633,7 +630,7 @@ html {
 }
 
 .forms {
-    padding-right: 21px;
+    margin-right: 21px;
 }
 
 .contact-info__header {
@@ -644,7 +641,7 @@ html {
     font-weight: 900;
     text-align: justify;
     letter-spacing: -0.007em;
-    padding-bottom: 9px;
+    margin-bottom: 9px;
 }
 
 .contact-info p {
@@ -654,7 +651,7 @@ html {
     font-family: "Lato-Regular", "Helvetica", sans-serif;
     font-weight: 400;
     text-align: justify;
-    padding-bottom: 25px;
+    margin-bottom: 25px;
     word-spacing: -0.1em;
     letter-spacing: -0.01em;
 }
@@ -717,9 +714,14 @@ html {
     align-items: center;
 }
 
-.copyright {
-    margin-left: 2px;
-    margin-top: 3px;
+.copyright p {
+    font-family: "Lato-Regular", "Helvetica", sans-serif;
+    font-weight: 300;
+    text-align: justify;
+    margin: 0px 0px 2px 1px;
+    font-size: 1.2rem;
+    color: #626984;
+    letter-spacing: -0.01em;
 }
 
 .footer__container_social {
