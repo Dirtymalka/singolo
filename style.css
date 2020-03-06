@@ -281,7 +281,7 @@ html {
 .portfolio__list {
     display: flex;
     justify-content: start;
-    margin: 18px 0 19px 1px;
+    margin: 17px 0 19px 1px;
     padding: 0;
 }
 
@@ -302,7 +302,7 @@ html {
 
 .portfolio__list_button {
     background-color: #2d303a;
-    padding: 6px 6px 5px 6px;
+    padding: 6px 6px 6px 6px;
     border-radius: 5px;
     border: 1px #666d89 solid;
     cursor: pointer;
