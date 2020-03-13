@@ -43,7 +43,8 @@
                             width="484" height="240">
                         <img class="black-horizontal block" src="./assets/img/black_horizontal.png" alt="">
                     </div>
-                    <div class="slider2 hidden"><img src="./assets/img/Slide-2.png" alt="" width="797" height="481"></div>
+                    <div class="slider2 hidden"><img src="./assets/img/Slide-2.png" alt="" width="797" height="481">
+                    </div>
                 </div>
                 <button class="right-arrow"></button>
             </div>
@@ -119,6 +120,7 @@
                     <li><button class="portfolio__list_button" disabled><span>Graphic Design</span></button></li>
                     <li><button class="portfolio__list_button" disabled><span>Artwork</span></button></li>
                 </ul>
+
                 <div class="portfolio__images">
                     <div class="image1"><img src="./assets/img/Project1.png" alt="Project1"></div>
                     <div class="image2"><img src="./assets/img/Project2.png" alt="Project2"></div>
@@ -136,6 +138,7 @@
             </div>
         </div>
     </section>
+
     <section id="about-us">
         <div class="wrapper">
             <div class="about-us__container">
@@ -145,6 +148,7 @@
                         Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
                         Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 </div>
+
                 <div class="about-us__people">
                     <div class="human adam-jensen">
                         <div><img src="./assets/img/photo1.png" alt="Adam Jensen" width="300" height="300"></div>
@@ -198,22 +202,33 @@
                         condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem
                         nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 </div>
+
                 <div class="get-a-quote__forms-contact-info">
                     <div class="forms">
-                        <form action="#" class="form" method="POST">
+                        <form action="" class="form" method="" id="form" onsubmit="return false;">
                             <input type="text" class="user-name" name="user-name" placeholder="Name (Required)" required
                                 pattern="[A-Za-z0-9]{1,15}">
                             <br>
                             <input type="email" name="user-email" id="user-email" placeholder="Email (Required)"
                                 required>
                             <br>
-                            <input type="text" class="user-subject" placeholder="Subject">
+                            <input type="text" id="subject" placeholder="Subject">
                             <br>
                             <textarea name="project-description" id="project-description" cols="30" rows="30"
                                 placeholder="Describe your project in detail..."></textarea>
                             <br>
-                            <input type="submit" value="Submit" class="form_submit">
+                            <button type="submit" class="form_submit" id="submit">SUBMIT</button>
                         </form>
+
+                        <div id="message-block" class="hidden-block">
+                            <div id="message">
+                                <p>Письмо отправлено</p><br>
+                                <p id="no-theme">Тема: <span id="message-theme"></span></p><br>
+                                <p id="no-description">Описание: <span id="message-description"></span></p><br>
+                                <button id="close-button">OK</button>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="contact-info">
                         <h2 class="contact-info__header">Contact Information</h2>
@@ -228,6 +243,7 @@
             </div>
         </div>
     </section>
+
     <footer class="footer">
         <div class="wrapper">
             <div class="footer__container">
