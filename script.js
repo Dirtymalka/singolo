@@ -1,5 +1,4 @@
 const navigation = document.querySelector('.navigation');
-const display = document.querySelector('.slider__content');
 
 //Intaractive Menu
 
@@ -9,6 +8,8 @@ navigation.addEventListener('click', (event) => {
 });
 
 //Disconnecting Phones
+
+const display = document.querySelector('.slider__content');
 
 display.addEventListener('click', (event) => {
     if (display.querySelector('.black-vertical').classList.contains('block') && event.target.classList.contains('vertical-phone')) display.querySelector('.black-vertical').classList.remove('block');
@@ -70,4 +71,16 @@ closeButton.addEventListener('click', () => {
     document.getElementById('no-theme').innerHTML = messageTheme;
     document.getElementById('no-description').innerHTML = messageDescription;
     document.getElementById('form').reset();
+});
+
+
+//PORTFOLIO-IMAGES
+
+const images = document.getElementById('portfolio__images');
+
+images.addEventListener('click', (event) => {
+    console.log(event.target.closest('div'));
+    if (event.target.tagName != 'IMG') return;
+    document.querySelectorAll('div').forEach(item => item.classList.remove('image-active'));
+    event.target.closest('div').classList.add('image-active');
 });
