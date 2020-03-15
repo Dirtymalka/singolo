@@ -155,6 +155,18 @@ a {
     display: none;
 }
 
+.vertical-phone_home-button{
+    position: absolute;
+    top: 405px;
+    left: 85px;
+}
+
+.horizontal-phone_home-button{
+    position: absolute;
+    top: 206px;
+    left: 321px;
+}
+
 .horizontal-phone {
     padding-bottom: 1px;
 }
@@ -198,7 +210,7 @@ a {
 .right-arrow:hover {
     background-image: url(./assets/img/arrow-right-hover.png);
     cursor: pointer;
-    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .left-arrow {
@@ -210,7 +222,7 @@ a {
 .left-arrow:hover {
     background-image: url(./assets/img/arrow-left-hover.png);
     cursor: pointer;
-    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 /*SERVICES*/
@@ -370,7 +382,7 @@ a {
 .portfolio__list_button:hover {
     border: 1px #c5c5c5 solid;
     color: #c5c5c5;
-    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .portfolio__list_button-active {
@@ -417,7 +429,7 @@ a {
 }
 
 .portfolio__img:hover {
-    -webkit-transform: scale(1.015);
+    transform: scale(1.015);
     cursor: pointer;
 }
 
@@ -726,7 +738,7 @@ a {
 }
 
 #submit:hover {
-    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
 }
 
 /*MESSAGE-BLOCK*/
@@ -765,7 +777,7 @@ a {
 
 #close-button:hover {
     cursor: pointer;
-    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
 }
 
 #close-button:focus {
