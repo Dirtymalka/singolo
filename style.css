@@ -370,6 +370,17 @@ a {
 .portfolio__list_button:hover {
     border: 1px #c5c5c5 solid;
     color: #c5c5c5;
+    -webkit-transform: scale(1.1);
+}
+
+.portfolio__list_button-active {
+    border: 1px #c5c5c5 solid;
+    color: #c5c5c5;
+    font-size: 1.4rem;
+}
+
+.portfolio__list_button-active:focus {
+    outline: none;
 }
 
 .portfolio__list :nth-child(2) button {

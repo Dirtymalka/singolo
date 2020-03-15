@@ -114,11 +114,11 @@
                         eget
                         lacinia odio sem nec elit.</p>
                 </div>
-                <ul class="portfolio__list">
-                    <li><button class="portfolio__list_button" disabled><span>All</span></button></li>
-                    <li><button class="portfolio__list_button" disabled><span>Web Design</span></button></li>
-                    <li><button class="portfolio__list_button" disabled><span>Graphic Design</span></button></li>
-                    <li><button class="portfolio__list_button" disabled><span>Artwork</span></button></li>
+                <ul class="portfolio__list" id="portfolio__list">
+                    <li><button class="portfolio__list_button">All</button></li>
+                    <li><button class="portfolio__list_button">Web Design</button></li>
+                    <li><button class="portfolio__list_button">Graphic Design</button></li>
+                    <li><button class="portfolio__list_button">Artwork</button></li>
                 </ul>
 
                 <div class="portfolio__images" id="portfolio__images">
@@ -206,16 +206,16 @@
                 <div class="get-a-quote__forms-contact-info">
                     <div class="forms">
                         <form action="" class="form" method="" id="form" onsubmit="return false;">
-                            <input type="text" class="user-name" name="user-name" placeholder="Name (Required)" required
-                                pattern="[A-Za-z0-9]{1,15}">
+                            <input type="text" id="user-name" name="user-name" placeholder="Name (Required)" required
+                                pattern="[A-Za-z0-9_-]{1,15}">
                             <br>
                             <input type="email" name="user-email" id="user-email" placeholder="Email (Required)"
-                                required>
+                                required pattern="[A-Za-z0-9._-]+@[A-Za-z0-9-]+.+.[A-Za-z]{2,4}">
                             <br>
-                            <input type="text" id="subject" placeholder="Subject">
+                            <input type="text" id="subject" placeholder="Subject" maxlength="50">
                             <br>
                             <textarea name="project-description" id="project-description" cols="30" rows="30"
-                                placeholder="Describe your project in detail..."></textarea>
+                                placeholder="Describe your project in detail..." maxlength="250"></textarea>
                             <br>
                             <button type="submit" class="form_submit" id="submit">SUBMIT</button>
                         </form>

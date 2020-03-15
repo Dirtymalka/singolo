@@ -49,6 +49,9 @@ const messageTheme = document.getElementById('no-theme').innerHTML;
 const messageDescription = document.getElementById('no-description').innerHTML;
 
 submit.addEventListener('click', () => {
+    //console.log((/^[a-z0-9_-]{3,16}$/).test(document.getElementById('user-name').value.toString()));
+    if (!document.getElementById('user-name').value.toString().match(/^[A-Za-z0-9_-]{1,16}$/)) return;
+    if (!document.getElementById('user-email').value.toString().match(/^[A-Za-z0-9._-]+@[A-Za-z0-9-]+.+.[A-Za-z]{2,4}$/)) return;
     const subject = document.getElementById('subject').value.toString();
     if (subject != '') {
         document.getElementById('message-theme').innerText = subject;
@@ -81,6 +84,32 @@ const images = document.getElementById('portfolio__images');
 images.addEventListener('click', (event) => {
     console.log(event.target.closest('div'));
     if (event.target.tagName != 'IMG') return;
-    document.querySelectorAll('div').forEach(item => item.classList.remove('image-active'));
+    images.querySelectorAll('div').forEach(item => item.classList.remove('image-active'));
     event.target.closest('div').classList.add('image-active');
+});
+
+
+//PORTFOLIO BUTTONS
+
+const portfolioList = document.getElementById('portfolio__list');
+
+portfolioList.addEventListener('click', (event) => {
+    console.log(event.target);
+    if (event.target.tagName != 'BUTTON') return;
+    portfolioList.querySelectorAll('button').forEach(element => element.classList.remove('portfolio__list_button-active'));
+    event.target.classList.add('portfolio__list_button-active');
+
+    function sortPictures() {
+        let pictures = Array.from(images.querySelectorAll('div'));
+
+        document.getElementById('portfolio__images').innerHTML = '';
+        for (let i = 1; i < pictures.length; i++) {
+            document.getElementById('portfolio__images').appendChild(pictures[i]);
+
+        }
+        document.getElementById('portfolio__images').appendChild(pictures[0]);
+        return;
+    }
+
+    sortPictures();
 });
