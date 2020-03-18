@@ -2,6 +2,37 @@ const navigation = document.querySelector('.navigation');
 
 //Intaractive Menu
 
+document.addEventListener('scroll', onScroll);
+
+function onScroll(event) {
+    const currentPos = window.scrollY;
+    const sections = document.querySelectorAll('body > section');
+    const links = document.querySelectorAll('.navigation a')
+
+    if (currentPos === 0) {
+        navigation.querySelectorAll('a').forEach(element => element.classList.remove('active'));
+        navigation.querySelectorAll('a')[0].classList.add('active');
+    }
+
+    sections.forEach((item) => {
+        if (item.offsetTop <= currentPos && (item.offsetTop + item.offsetHeight) > currentPos) {
+            links.forEach((a) => {
+                a.classList.remove('active');
+                if (item.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('active');
+                }
+            })
+        }
+
+    });
+
+
+    if ((window.pageYOffset + document.documentElement.clientHeight) === document.body.scrollHeight) {
+        navigation.querySelectorAll('a').forEach(element => element.classList.remove('active'));
+        navigation.querySelectorAll('a')[links.length-1].classList.add('active');
+    }
+}
+
 navigation.addEventListener('click', (event) => {
     navigation.querySelectorAll('a').forEach(element => element.classList.remove('active'));
     event.target.classList.add('active');
@@ -12,7 +43,6 @@ navigation.addEventListener('click', (event) => {
 const display = document.querySelector('.slider__content');
 
 display.addEventListener('click', (event) => {
-    console.log(event.target);
     if (display.querySelector('.black-vertical').classList.contains('block') && event.target.classList.contains('vertical-phone_home-button')) display.querySelector('.black-vertical').classList.remove('block');
     else if (!display.querySelector('.black-vertical').classList.contains('block') && event.target.classList.contains('vertical-phone_home-button')) display.querySelector('.black-vertical').classList.add('block');
 });
@@ -31,6 +61,7 @@ const slider = container.querySelector('.slider__content');
 container.addEventListener('click', (event) => {
     if (event.target.classList.contains('right-arrow') || event.target.classList.contains('left-arrow')) {
         slider.querySelectorAll('div').forEach(element => element.classList.toggle('hidden'));
+
         if (!slider.querySelector('.slider2').classList.contains('hidden')) {
             container.classList.add('slider-bg');
             container.querySelectorAll('button').forEach(element => element.classList.add('slider-bg'));
@@ -50,7 +81,7 @@ const messageTheme = document.getElementById('no-theme').innerHTML;
 const messageDescription = document.getElementById('no-description').innerHTML;
 
 submit.addEventListener('click', () => {
-    if (!document.getElementById('user-name').value.toString().match(/^[A-Za-z0-9_-]{1,16}$/)) return;
+    if (!document.getElementById('user-name').value.toString().match(/^[A-Za-z_-]{1,16}$/)) return;
     if (!document.getElementById('user-email').value.toString().match(/^[A-Za-z0-9._-]+@[A-Za-z0-9-]+.+.[A-Za-z]{2,4}$/)) return;
     const subject = document.getElementById('subject').value.toString();
     if (subject != '') {
@@ -82,7 +113,6 @@ closeButton.addEventListener('click', () => {
 const images = document.getElementById('portfolio__images');
 
 images.addEventListener('click', (event) => {
-    console.log(event.target.closest('div'));
     if (event.target.tagName != 'IMG') return;
     images.querySelectorAll('div').forEach(item => item.classList.remove('image-active'));
     event.target.closest('div').classList.add('image-active');

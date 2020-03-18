@@ -40,6 +40,13 @@ a {
     margin: 0 auto;
 }
 
+header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 50;
+}
+
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -99,12 +106,21 @@ a {
     color: #494e62;
 }
 
+/*Intaractive Menu*/
+
 .navigation li a.active {
     color: #f06c64;
     font-size: 1.4rem;
 }
 
+/*END Intaractive Menu*/
+
 /*SLIDER*/
+
+.slider {
+    position: relative;
+    top: 93px;
+}
 
 .slider-container {
     padding: 53px 40px 58px 40px;
@@ -120,12 +136,10 @@ a {
     margin: 0 auto;
     margin: 0 71px 0 72px;
     position: relative;
-    width: 797px;
     margin-right: 71px;
 }
 
 .slider1 {
-    min-width: 797px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -135,9 +149,52 @@ a {
     margin-right: 0;
 }
 
+/*Slider*/
+
 .hidden {
     display: none;
+    animation: 0.5s ease-in-out;
 }
+
+.to-left {
+    animation-name: left;
+}
+
+.to-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+
+.from-left {
+    animation-name: left;
+    animation-direction: reverse;
+}
+
+.from-right {
+    animation-name: right;
+}
+
+@keyframes left {
+    from {
+        left: 0;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes right {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+/*END Slider*/
+
+/*Disconnecting Phones*/
 
 .black-vertical {
     position: absolute;
@@ -155,16 +212,22 @@ a {
     display: none;
 }
 
-.vertical-phone_home-button{
+/*END Disconnecting Phones*/
+
+.vertical-phone_home-button {
     position: absolute;
     top: 405px;
     left: 85px;
 }
 
-.horizontal-phone_home-button{
+.horizontal-phone_home-button {
     position: absolute;
     top: 206px;
     left: 321px;
+}
+
+.phone-button:hover {
+    cursor: pointer;
 }
 
 .horizontal-phone {
@@ -176,7 +239,7 @@ a {
     border: 0;
     background-color: #f06c64;
     position: absolute;
-    top: 281px;
+    top: 50%;
     left: 42px;
 }
 
@@ -190,21 +253,21 @@ a {
     background-color: #f06c64;
     position: absolute;
     right: 40px;
-    bottom: 286px;
+    top: 50%;
 }
 
 .right-arrow:focus {
     outline: none;
 }
 
-.slider-bg {
-    background-color: #648BF0;
-}
-
 .right-arrow {
     background-image: url(./assets/img/arrow-right.png);
     width: 16px;
     height: 27px;
+}
+
+.slider-bg {
+    background-color: #648BF0;
 }
 
 .right-arrow:hover {
@@ -385,11 +448,15 @@ a {
     transform: scale(1.1);
 }
 
+/*PORTFOLIO BUTTONS ACTIVE*/
+
 .portfolio__list_button-active {
     border: 1px #c5c5c5 solid;
     color: #c5c5c5;
     font-size: 1.4rem;
 }
+
+/*END PORTFOLIO BUTTONS ACTIVE*/
 
 .portfolio__list_button-active:focus {
     outline: none;
@@ -415,8 +482,6 @@ a {
 .portfolio__images {
     display: flex;
     flex-wrap: wrap;
-    max-height: 621px;
-    overflow: hidden;
 }
 
 .portfolio__img {
@@ -441,11 +506,15 @@ a {
     margin-right: 0;
 }
 
+/*PORTFOLIO-IMAGES*/
+
 .image-active {
     border: 5px solid #F06C64;
     height: 177px;
     width: 210px;
 }
+
+/*END PORTFOLIO-IMAGES*/
 
 .image1 img {
     top: -11px;
@@ -784,6 +853,8 @@ a {
     outline: none;
 }
 
+/*END MESSAGE-BLOCK*/
+
 .contact-info__header {
     font-size: 1.8rem;
     line-height: 19px;
@@ -927,4 +998,66 @@ a {
 
 .footer__container_social .linked-in:hover {
     background-image: url(./assets/img/LinkedIn_active.svg);
+}
+
+@media (max-width: 768px) {
+    .vertical-phone {
+        width: 162px;
+        height: 344px;
+    }
+    .horizontal-phone {
+        width: 344px;
+        height: 162px;
+    }
+    .slider2 {
+        width: 546px;
+        height: 344px;
+    }
+    .vertical-phone_home-button {
+        width: 31px;
+        height: 31px;
+        top: 290px;
+        left: 57px;
+    }
+    .horizontal-phone_home-button {
+        width: 31px;
+        height: 31px;
+        top: 149px;
+        left: 207px;
+    }
+    .black-vertical {
+        left: 9px;
+        top: 46px;
+        width: 128px;
+        height: 238px;
+    }
+    .black-horizontal {
+        left: 243px;
+        top: 100px;
+        height: 128px;
+        width: 238px;
+    }
+    .slider2 img {
+        width: 546px;
+        height: 342px;
+    }
+    .portfolio__images :nth-child(4n) {
+        margin-right: 19.5px;
+    }
+    .portfolio__images :nth-child(3n) {
+        margin-right: 0;
+    }
+    .portfolio__img {
+        height: 183px;
+        width: 216px;
+    }
+    .image-active {
+        border: 3px solid #F06C64;
+        height: 173px;
+        width: 206px;
+    }
+    .human div img {
+        height: 218px;
+        width: 218px;
+    }
 }

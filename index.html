@@ -35,17 +35,16 @@
             <div class="slider-container">
                 <button class="left-arrow"></button>
                 <div class="slider__content">
-                    <div class="slider1">
-                        <img class="vertical-phone" src="./assets/img/iPhone-Vertical.png" alt="iPhone Vertical"
-                            width="240" height="483">
-                        <img class="vertical-phone_home-button" src="./assets/img/Home Button.png" alt="">
+                    <div class="slider1 phone">
+                        <img class="vertical-phone" src="./assets/img/iPhone-Vertical.png" alt="iPhone Vertical">
+                        <img class="vertical-phone_home-button phone-button" src="./assets/img/Home Button.png" alt="">
                         <img class="black-vertical block" src="./assets/img/black_vertical.png" alt="">
                         <img class="horizontal-phone" src="./assets/img/iPhone-Horizontal.png" alt="iPhone Horizontal"
-                            width="484" height="240">
-                        <img class="horizontal-phone_home-button" src="./assets/img/Home Button.png" alt="">
+                            >
+                        <img class="horizontal-phone_home-button phone-button" src="./assets/img/Home Button.png" alt="">
                         <img class="black-horizontal block" src="./assets/img/black_horizontal.png" alt="">
                     </div>
-                    <div class="slider2 hidden"><img src="./assets/img/Slide-2.png" alt="" width="797" height="481">
+                    <div class="slider2 hidden phone"><img src="./assets/img/Slide-2.png" alt="" width="797" height="481">
                     </div>
                 </div>
                 <button class="right-arrow"></button>
@@ -209,7 +208,7 @@
                     <div class="forms">
                         <form action="" class="form" method="" id="form" onsubmit="return false;">
                             <input type="text" id="user-name" name="user-name" placeholder="Name (Required)" required
-                                pattern="[A-Za-z0-9_-]{1,15}">
+                                pattern="[A-Za-z_-]{1,15}">
                             <br>
                             <input type="email" name="user-email" id="user-email" placeholder="Email (Required)"
                                 required pattern="[A-Za-z0-9._-]+@[A-Za-z0-9-]+.+.[A-Za-z]{2,4}">
