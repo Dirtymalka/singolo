@@ -25,6 +25,12 @@
 
 html {
     font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /*HEADER*/
@@ -32,6 +38,13 @@ html {
 .wrapper {
     max-width: 1020px;
     margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 50;
 }
 
 .header-container {
@@ -64,7 +77,7 @@ html {
     justify-content: space-between;
 }
 
-.header__navigation .navigation li a {
+.navigation li {
     color: white;
     font-size: 1.2rem;
     font-family: "Lato", "Helvetica", sans-serif;
@@ -75,11 +88,11 @@ html {
     letter-spacing: -0.02em;
 }
 
-.header__navigation .navigation li a:hover {
+.navigation li:hover {
     color: #f06c64;
 }
 
-.header__navigation .navigation li {
+.navigation li {
     margin-left: 30px;
     position: relative;
     list-style-type: none;
@@ -93,7 +106,21 @@ html {
     color: #494e62;
 }
 
+/*Intaractive Menu*/
+
+.navigation li a.active {
+    color: #f06c64;
+    font-size: 1.4rem;
+}
+
+/*END Intaractive Menu*/
+
 /*SLIDER*/
+
+.slider {
+    position: relative;
+    top: 93px;
+}
 
 .slider-container {
     padding: 53px 40px 58px 40px;
@@ -103,33 +130,134 @@ html {
 }
 
 .slider__content {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    margin: 0 auto;
+    margin: 0 71px 0 72px;
+    position: relative;
+    margin-right: 71px;
+}
+
+.slider1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    margin: 0 71px 0 72px;
+    /*margin: 0 71px 0 72px;*/
+    position: relative;
+    margin-right: 0;
+}
+
+/*Slider*/
+
+.hidden {
+    display: none;
+    animation: 0.5s ease-in-out;
+}
+
+.to-left {
+    animation-name: left;
+}
+
+.to-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+
+.from-left {
+    animation-name: left;
+    animation-direction: reverse;
+}
+
+.from-right {
+    animation-name: right;
+}
+
+@keyframes left {
+    from {
+        left: 0;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes right {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+/*END Slider*/
+
+/*Disconnecting Phones*/
+
+.black-vertical {
+    position: absolute;
+    left: 14px;
+    top: 65px;
+}
+
+.black-horizontal {
+    position: absolute;
+    left: 373px;
+    top: 135px;
+}
+
+.block {
+    display: none;
+}
+
+/*END Disconnecting Phones*/
+
+.vertical-phone_home-button {
+    position: absolute;
+    top: 405px;
+    left: 85px;
+}
+
+.horizontal-phone_home-button {
+    position: absolute;
+    top: 206px;
+    left: 321px;
+}
+
+.phone-button:hover {
+    cursor: pointer;
 }
 
 .horizontal-phone {
     padding-bottom: 1px;
 }
 
-.slider-container .left-arrow {
+.left-arrow {
     padding: 0;
     border: 0;
     background-color: #f06c64;
     position: absolute;
-    top: 281px;
+    top: 50%;
     left: 42px;
 }
 
-.slider-container .right-arrow {
+.left-arrow:focus {
+    outline: none;
+}
+
+.right-arrow {
     padding: 0;
     border: 0;
     background-color: #f06c64;
     position: absolute;
     right: 40px;
-    bottom: 286px;
+    top: 50%;
+}
+
+.right-arrow:focus {
+    outline: none;
 }
 
 .right-arrow {
@@ -138,9 +266,14 @@ html {
     height: 27px;
 }
 
+.slider-bg {
+    background-color: #648BF0;
+}
+
 .right-arrow:hover {
     background-image: url(./assets/img/arrow-right-hover.png);
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 .left-arrow {
@@ -152,6 +285,7 @@ html {
 .left-arrow:hover {
     background-image: url(./assets/img/arrow-left-hover.png);
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 /*SERVICES*/
@@ -311,6 +445,21 @@ html {
 .portfolio__list_button:hover {
     border: 1px #c5c5c5 solid;
     color: #c5c5c5;
+    transform: scale(1.1);
+}
+
+/*PORTFOLIO BUTTONS ACTIVE*/
+
+.portfolio__list_button-active {
+    border: 1px #c5c5c5 solid;
+    color: #c5c5c5;
+    font-size: 1.4rem;
+}
+
+/*END PORTFOLIO BUTTONS ACTIVE*/
+
+.portfolio__list_button-active:focus {
+    outline: none;
 }
 
 .portfolio__list :nth-child(2) button {
@@ -333,11 +482,9 @@ html {
 .portfolio__images {
     display: flex;
     flex-wrap: wrap;
-    max-height: 621px;
-    overflow: hidden;
 }
 
-.portfolio__images div {
+.portfolio__img {
     height: 187px;
     width: 220px;
     margin-bottom: 20px;
@@ -346,13 +493,28 @@ html {
     overflow: hidden;
 }
 
-.portfolio__images div img {
+.portfolio__img:hover {
+    transform: scale(1.015);
+    cursor: pointer;
+}
+
+.portfolio__img img {
     position: absolute;
 }
 
 .portfolio__images :nth-child(4n) {
     margin-right: 0;
 }
+
+/*PORTFOLIO-IMAGES*/
+
+.image-active {
+    border: 5px solid #F06C64;
+    height: 177px;
+    width: 210px;
+}
+
+/*END PORTFOLIO-IMAGES*/
 
 .image1 img {
     top: -11px;
@@ -618,8 +780,8 @@ html {
 }
 
 .form .form_submit {
-    width: initial;
-    height: initial;
+    width: 75px;
+    height: 35px;
     text-indent: initial;
     border: 1px solid #982c2c;
     margin-bottom: 0;
@@ -632,6 +794,66 @@ html {
 .forms {
     margin-right: 21px;
 }
+
+#submit {
+    border: 0;
+    border-radius: 5px;
+    background: #d6564f;
+    color: #f0d8d9;
+}
+
+#submit:focus {
+    outline: none;
+}
+
+#submit:hover {
+    transform: scale(1.08);
+}
+
+/*MESSAGE-BLOCK*/
+
+#message-block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.8);
+    z-index: 100;
+}
+
+.hidden-block {
+    display: none;
+}
+
+#message {
+    background: rgba(226, 153, 156, 0.5);
+    font-family: "Lato-Regular", "Helvetica", sans-serif;
+    font-size: 1.4rem;
+    color: #f0d8d9;
+    text-align: center;
+    padding: 3px 5px;
+}
+
+#close-button {
+    padding: 3px 5px;
+    font-size: 2rem;
+    border: 0;
+    border-radius: 5px;
+    background: rgba(156, 46, 50, 0.4);
+    color: #f0d8d9;
+}
+
+#close-button:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+}
+
+#close-button:focus {
+    outline: none;
+}
+
+/*END MESSAGE-BLOCK*/
 
 .contact-info__header {
     font-size: 1.8rem;
@@ -776,4 +998,66 @@ html {
 
 .footer__container_social .linked-in:hover {
     background-image: url(./assets/img/LinkedIn_active.svg);
+}
+
+@media (max-width: 768px) {
+    .vertical-phone {
+        width: 162px;
+        height: 344px;
+    }
+    .horizontal-phone {
+        width: 344px;
+        height: 162px;
+    }
+    .slider2 {
+        width: 546px;
+        height: 344px;
+    }
+    .vertical-phone_home-button {
+        width: 31px;
+        height: 31px;
+        top: 290px;
+        left: 57px;
+    }
+    .horizontal-phone_home-button {
+        width: 31px;
+        height: 31px;
+        top: 149px;
+        left: 207px;
+    }
+    .black-vertical {
+        left: 9px;
+        top: 46px;
+        width: 128px;
+        height: 238px;
+    }
+    .black-horizontal {
+        left: 243px;
+        top: 100px;
+        height: 128px;
+        width: 238px;
+    }
+    .slider2 img {
+        width: 546px;
+        height: 342px;
+    }
+    .portfolio__images :nth-child(4n) {
+        margin-right: 19.5px;
+    }
+    .portfolio__images :nth-child(3n) {
+        margin-right: 0;
+    }
+    .portfolio__img {
+        height: 183px;
+        width: 216px;
+    }
+    .image-active {
+        border: 3px solid #F06C64;
+        height: 173px;
+        width: 206px;
+    }
+    .human div img {
+        height: 218px;
+        width: 218px;
+    }
 }
