@@ -118,78 +118,87 @@ header {
 /*SLIDER*/
 
 .slider {
-    position: relative;
-    top: 93px;
+    margin-top: 93px;
 }
 
-.slider-container {
-    padding: 53px 40px 58px 40px;
+.slider-wrapper {
     position: relative;
-    background-color: #f06c64;
-    border-bottom: 6px #ea676b solid;
+    display: flex;
+    overflow: hidden;
 }
 
-.slider__content {
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
-    margin: 0 auto;
-    margin: 0 71px 0 72px;
+.slider2 {
+    padding: 53px 111px 58px 112px;
     position: relative;
-    margin-right: 71px;
+    background-color: #648BF0;
+    border-bottom: 6px rgb(61, 107, 221) solid;
 }
 
 .slider1 {
+    padding: 53px 111px 58px 112px;
+    position: relative;
+    background-color: #f06c64;
+    border-bottom: 6px #ea676b solid;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
-    /*margin: 0 71px 0 72px;*/
-    position: relative;
-    margin-right: 0;
 }
 
 /*Slider*/
 
-.hidden {
-    display: none;
-    animation: 0.5s ease-in-out;
-}
-
-.to-left {
-    animation-name: left;
-}
-
-.to-right {
-    animation-name: right;
-    animation-direction: reverse;
-}
-
-.from-left {
-    animation-name: left;
-    animation-direction: reverse;
-}
-
-.from-right {
-    animation-name: right;
-}
-
-@keyframes left {
-    from {
-        left: 0;
+@keyframes bobble1 {
+    0% {
+        transform: translate3d(-1020px, 0px, 0px);
+        animation-timing-function: linear;
     }
-    to {
-        left: -100%;
+        100% {
+        transform: translate3d(0px, 0px, 0px);
+        animation-timing-function: linear;
     }
 }
+@keyframes bobble2 {
+      0% {
+        transform: translate3d(0px, 0px, 0px);
+        animation-timing-function: linear;
+    }
+  100% {
+        transform: translate3d(1020px, 0px, 0px);
+        animation-timing-function: linear;
+    }
+}
+@keyframes bobble3 {
+      0% {
+        transform: translate3d(0, 0px, 0px);
+                animation-timing-function: linear;
 
-@keyframes right {
-    from {
-        left: 100%;
     }
-    to {
-        left: 0;
+100% {
+        transform: translate3d(-1020px, 0px, 0px);
+        animation-timing-function: linear;
     }
+}
+@keyframes bobble4 {
+0% {
+        transform: translate3d(1020px, 0px, 0px);
+        animation-timing-function: linear;
+    }
+        100% {
+        transform: translate3d(0px, 0px, 0px);
+        animation-timing-function: linear;
+    }
+}
+
+div.animation1 {
+    animation: bobble1 1s forwards;
+}
+div.animation2 {
+    animation: bobble2 1s forwards;
+}
+div.animation3 {
+    animation: bobble3 1s forwards;
+}
+div.animation4 {
+    animation: bobble4 1s forwards;
 }
 
 /*END Slider*/
@@ -198,14 +207,14 @@ header {
 
 .black-vertical {
     position: absolute;
-    left: 14px;
-    top: 65px;
+    left: 4.5%;
+    top: 13.5%;
 }
 
 .black-horizontal {
     position: absolute;
-    left: 373px;
-    top: 135px;
+    left: 12.5%;
+    top: 5.6%;
 }
 
 .block {
@@ -214,16 +223,26 @@ header {
 
 /*END Disconnecting Phones*/
 
+.vertical {
+    padding-right: 73px;
+    position: relative;
+}
+
+.horizontal {
+    position: relative;
+}
+
 .vertical-phone_home-button {
     position: absolute;
-    top: 405px;
-    left: 85px;
+    top: 84%;
+    left: 27%;
 }
 
 .horizontal-phone_home-button {
     position: absolute;
-    top: 206px;
-    left: 321px;
+    top: 34.7%;
+    left: 1.5%;
+
 }
 
 .phone-button:hover {
@@ -237,10 +256,11 @@ header {
 .left-arrow {
     padding: 0;
     border: 0;
-    background-color: #f06c64;
+    background-color: rgb(240, 108, 100);;
     position: absolute;
     top: 50%;
     left: 42px;
+    z-index: 10;
 }
 
 .left-arrow:focus {

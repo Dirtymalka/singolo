@@ -27,9 +27,13 @@ function onScroll(event) {
     });
 
 
-    if ((window.pageYOffset + document.documentElement.clientHeight) === document.body.scrollHeight) {
+    if ((window.pageYOffset + document.documentElement.clientHeight) === Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight
+      )) {
         navigation.querySelectorAll('a').forEach(element => element.classList.remove('active'));
-        navigation.querySelectorAll('a')[links.length-1].classList.add('active');
+        navigation.querySelectorAll('a')[links.length - 1].classList.add('active');
     }
 }
 
@@ -40,7 +44,7 @@ navigation.addEventListener('click', (event) => {
 
 //Disconnecting Phones
 
-const display = document.querySelector('.slider__content');
+const display = document.querySelector('.slider-wrapper');
 
 display.addEventListener('click', (event) => {
     if (display.querySelector('.black-vertical').classList.contains('block') && event.target.classList.contains('vertical-phone_home-button')) display.querySelector('.black-vertical').classList.remove('block');
@@ -55,23 +59,66 @@ display.addEventListener('click', (event) => {
 
 //Slider
 
-const container = document.querySelector('.slider-container');
-const slider = container.querySelector('.slider__content');
+const container = document.querySelector('.slider-wrapper');
+
+const slider1 = container.querySelector('.slider1').innerHTML;
+
+const slider2 = container.querySelector('.slider2');
 
 container.addEventListener('click', (event) => {
-    if (event.target.classList.contains('right-arrow') || event.target.classList.contains('left-arrow')) {
-        slider.querySelectorAll('div').forEach(element => element.classList.toggle('hidden'));
-
-        if (!slider.querySelector('.slider2').classList.contains('hidden')) {
-            container.classList.add('slider-bg');
-            container.querySelectorAll('button').forEach(element => element.classList.add('slider-bg'));
-        }
-        else {
-            container.classList.remove('slider-bg');
-            container.querySelectorAll('button').forEach(element => element.classList.remove('slider-bg'));
-        }
+    const slider = Array.from(document.querySelectorAll('.slider-item'));
+    if (event.target.tagName != 'BUTTON') return;
+    if (event.target.classList.contains('left-arrow')) {
+        container.querySelector('.slider2').classList.add('animation3');
+        container.querySelector('.slider1').classList.add('animation3');
+        setTimeout(() => {
+            document.querySelector('.slider-wrapper').innerHTML = '';
+            for (let i = 0; i < 4; i++) {
+                if (i === 1) {
+                    document.querySelector('.slider-wrapper').append(slider[2]);
+                    continue;
+                }
+                if (i == 2) {
+                    document.querySelector('.slider-wrapper').append(slider[1]);
+                    continue;
+                }
+                document.querySelector('.slider-wrapper').append(slider[i]);
+            }
+            container.querySelector('.slider2').classList.remove('animation3');
+            container.querySelector('.slider1').classList.remove('animation3');
+        }, 1500);
     }
+
 });
+
+container.addEventListener('click', (event) => {
+    const slider = Array.from(document.querySelectorAll('.slider-item'));
+    if (event.target.tagName != 'BUTTON') return;
+    if (event.target.classList.contains('right-arrow')) {
+        document.querySelector('.slider-wrapper').innerHTML = '';
+
+        for (let i = 0; i < 4; i++) {
+            if (i === 1) {
+                document.querySelector('.slider-wrapper').append(slider[2]);
+                continue;
+            }
+            if (i == 2) {
+                document.querySelector('.slider-wrapper').append(slider[1]);
+                continue;
+            }
+            document.querySelector('.slider-wrapper').append(slider[i]);
+        }
+
+    }
+    container.querySelector('.slider2').classList.add('animation1');
+    container.querySelector('.slider1').classList.add('animation1');
+    setTimeout(() => {
+        container.querySelector('.slider2').classList.remove('animation1');
+        container.querySelector('.slider1').classList.remove('animation1');
+    }, 1000);
+
+});
+
 
 //Form
 
@@ -124,14 +171,12 @@ images.addEventListener('click', (event) => {
 const portfolioList = document.getElementById('portfolio__list');
 
 portfolioList.addEventListener('click', (event) => {
-    console.log(event.target);
     if (event.target.tagName != 'BUTTON') return;
     portfolioList.querySelectorAll('button').forEach(element => element.classList.remove('portfolio__list_button-active'));
     event.target.classList.add('portfolio__list_button-active');
 
     function sortPictures() {
         let pictures = Array.from(images.querySelectorAll('div'));
-
         document.getElementById('portfolio__images').innerHTML = '';
         for (let i = 1; i < pictures.length; i++) {
             document.getElementById('portfolio__images').appendChild(pictures[i]);
