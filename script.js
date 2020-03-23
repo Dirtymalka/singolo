@@ -23,15 +23,13 @@ function onScroll(event) {
                 }
             })
         }
-
     });
-
 
     if ((window.pageYOffset + document.documentElement.clientHeight) === Math.max(
         document.body.scrollHeight, document.documentElement.scrollHeight,
         document.body.offsetHeight, document.documentElement.offsetHeight,
         document.body.clientHeight, document.documentElement.clientHeight
-      )) {
+    )) {
         navigation.querySelectorAll('a').forEach(element => element.classList.remove('active'));
         navigation.querySelectorAll('a')[links.length - 1].classList.add('active');
     }
@@ -68,6 +66,32 @@ const slider2 = container.querySelector('.slider2');
 container.addEventListener('click', (event) => {
     const slider = Array.from(document.querySelectorAll('.slider-item'));
     if (event.target.tagName != 'BUTTON') return;
+    if (event.target.classList.contains('right-arrow')) {
+        document.querySelector('.slider-wrapper').innerHTML = '';
+
+        for (let i = 0; i < 4; i++) {
+            if (i === 1) {
+                document.querySelector('.slider-wrapper').append(slider[2]);
+                continue;
+            }
+            if (i == 2) {
+                document.querySelector('.slider-wrapper').append(slider[1]);
+                continue;
+            }
+            document.querySelector('.slider-wrapper').append(slider[i]);
+        }
+    }
+    container.querySelector('.slider2').classList.add('animation1');
+    container.querySelector('.slider1').classList.add('animation1');
+    setTimeout(() => {
+        container.querySelector('.slider2').classList.remove('animation1');
+        container.querySelector('.slider1').classList.remove('animation1');
+    }, 1000);
+});
+
+container.addEventListener('click', (event) => {
+    const slider = Array.from(document.querySelectorAll('.slider-item'));
+    if (event.target.tagName != 'BUTTON') return;
     if (event.target.classList.contains('left-arrow')) {
         container.querySelector('.slider2').classList.add('animation3');
         container.querySelector('.slider1').classList.add('animation3');
@@ -88,35 +112,6 @@ container.addEventListener('click', (event) => {
             container.querySelector('.slider1').classList.remove('animation3');
         }, 1500);
     }
-
-});
-
-container.addEventListener('click', (event) => {
-    const slider = Array.from(document.querySelectorAll('.slider-item'));
-    if (event.target.tagName != 'BUTTON') return;
-    if (event.target.classList.contains('right-arrow')) {
-        document.querySelector('.slider-wrapper').innerHTML = '';
-
-        for (let i = 0; i < 4; i++) {
-            if (i === 1) {
-                document.querySelector('.slider-wrapper').append(slider[2]);
-                continue;
-            }
-            if (i == 2) {
-                document.querySelector('.slider-wrapper').append(slider[1]);
-                continue;
-            }
-            document.querySelector('.slider-wrapper').append(slider[i]);
-        }
-
-    }
-    container.querySelector('.slider2').classList.add('animation1');
-    container.querySelector('.slider1').classList.add('animation1');
-    setTimeout(() => {
-        container.querySelector('.slider2').classList.remove('animation1');
-        container.querySelector('.slider1').classList.remove('animation1');
-    }, 1000);
-
 });
 
 
