@@ -183,3 +183,16 @@ portfolioList.addEventListener('click', (event) => {
 
     sortPictures();
 });
+
+
+//HAMBURGER
+
+const hamburger = document.querySelector('.hamburger')
+
+hamburger.addEventListener('click', () => {
+    document.querySelector('.hamburger').classList.toggle('active-burger');
+    document.querySelector('.hamburger-line').classList.toggle('active-burger');
+    document.querySelector('.navigation').classList.toggle('active-burger');
+    document.querySelector('.header__navigation').classList.toggle('active-burger');
+    document.querySelector('.logo').classList.toggle('active-burger');
+})

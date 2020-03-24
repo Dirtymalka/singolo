@@ -57,6 +57,10 @@ header {
     color: white;
 }
 
+.logo-container {
+    display: flex;
+}
+
 .logo-container h1 {
     font-family: "Lato-Bold", "Helvetica", sans-serif;
     font-size: 2.5rem;
@@ -72,7 +76,7 @@ header {
     line-height: 20px;
 }
 
-.header__navigation .navigation {
+.navigation {
     display: flex;
     justify-content: space-between;
 }
@@ -98,12 +102,76 @@ header {
     list-style-type: none;
 }
 
-.header__navigation .navigation li+li::before {
+.navigation li+li::before {
     position: absolute;
     bottom: 3px;
     left: -16px;
     content: ".";
     color: #494e62;
+}
+
+/*HAMBURGER*/
+
+.hamburger {
+    display: none;
+    position: relative;
+    width: 25px;
+    height: 20px;
+}
+
+.hamburger::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background: #FFFFFF;
+    border-radius: 5px;
+    height: 2.4px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.hamburger.active-burger::before {
+    transform: rotate(90deg);
+    left: -50%;
+    top: 50%;
+}
+
+.hamburger.active-burger::after {
+    transform: rotate(90deg);
+    left: 50%;
+    top: 50%;
+}
+
+.hamburger::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background: #FFFFFF;
+    border-radius: 5px;
+    height: 2.4px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.hamburger-line {
+    display: inline-block;
+    position: absolute;
+    background: #FFFFFF;
+    border-radius: 5px;
+    height: 2.4px;
+    width: 100%;
+    top: calc(50% - 1.5px);
+    transition: all 0.3s ease 0s;
+}
+
+.hamburger-line.active-burger {
+    transform: rotate(90deg);
+    left: 0;
+    top: 50%;
 }
 
 /*Intaractive Menu*/
@@ -218,7 +286,7 @@ div.animation4 {
 
 .black-horizontal {
     position: absolute;
-    left: 12.5%;
+    left: 12.4%;
     top: 5.6%;
 }
 
@@ -546,7 +614,6 @@ div.animation4 {
 
 /*END PORTFOLIO-IMAGES*/
 
-
 /*ABOUT US*/
 
 .about-us__container {
@@ -598,7 +665,7 @@ div.animation4 {
     max-width: 300px;
 }
 
-.human div  img{
+.human div img {
     max-width: 100%;
 }
 
@@ -986,6 +1053,15 @@ div.animation4 {
     .portfolio__img {
         width: 30.5%;
     }
+    .header-container {
+        padding: 29px 40px 35px 40px;
+    }
+    .slider {
+        margin-top: 90px;
+    }
+    .services__header {
+        padding: 40px 40px 46px 40px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1105,6 +1181,78 @@ div.animation4 {
 }
 
 @media (max-width: 767px) {
+    .header {
+        width: 100%;
+    }
+    .logo-container {
+        width: 100%;
+    }
+    .logo {
+        margin: 0 auto;
+        transition: all 0.3s ease 0s;
+    }
+    .logo.active-burger {
+        margin-left: 29px;
+    }
+    .header__navigation {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0, 0.4);
+        z-index: 5;
+        transition: all 0.1s ease 0s;
+    }
+    .header__navigation.active-burger {
+        left: 0;
+    }
+    .navigation {
+        position: fixed;
+        flex-direction: column;
+        left: calc(-100% - 71px);
+        padding-left: 0;
+        height: 100%;
+        width: 55%;
+        background-color: #2D303A;
+        top: 0;
+        justify-content: start;
+        padding: 232px 0 0 71px;
+        transition: all 0.3s ease 0s;
+    }
+    .navigation.active-burger {
+        left: 0;
+    }
+    .navigation li {
+        padding-bottom: 27px;
+        font-size: 2.4rem;
+        line-height: 29px;
+        letter-spacing: -0.035em;
+        margin: 0;
+        width: auto;
+    }
+    .navigation li+li::before {
+        content: none;
+    }
+    .header-container {
+        padding: 26px 20px 25px 20px;
+        ;
+    }
+    .hamburger {
+        display: inline-block;
+        z-index: 10;
+    }
+    .logo {
+        align-self: center;
+        z-index: 10;
+    }
+    .slider {
+        margin-top: 77px;
+    }
+    .navigation li a.active {
+        color: #f06c64;
+        font-size: 2.6rem;
+    }
     /*SERVICES*/
     .services__description__item {
         width: 100%;
@@ -1143,7 +1291,6 @@ div.animation4 {
         border: 2px solid #F06C64;
         width: 44%;
     }
-
     /*ABOUT US*/
     .about-us__container {
         padding: 33px 30px 11px 30px;
@@ -1157,7 +1304,7 @@ div.animation4 {
     .human div {
         margin-bottom: 18px;
     }
-    .human div img{
+    .human div img {
         width: 100%;
         height: 100%;
     }
@@ -1178,9 +1325,7 @@ div.animation4 {
         flex-direction: column;
         align-items: center;
     }
-
     /*GET A QUOTE*/
-
     .get-a-quote__container {
         padding: 44px 30px 38px 30px;
     }
@@ -1193,7 +1338,6 @@ div.animation4 {
     .forms {
         width: 100%;
     }
-
     .get-a-quote__text_header {
         margin-bottom: 14px;
     }
@@ -1220,7 +1364,6 @@ div.animation4 {
         width: 100%;
     }
 }
-
 
 @media (max-width: 375px) {
     .header {
@@ -1287,9 +1430,6 @@ div.animation4 {
         height: 177px;
     }
     /*OUR SERVICES*/
-
-
-
     .services__header {
         padding: 25px 29px 25px 32px;
     }
@@ -1306,9 +1446,6 @@ div.animation4 {
         padding-bottom: 7px;
     }
     /*portfolio*/
-
-
-
     .portfolio__container {
         padding: 42px 30px 28px 30px;
     }
@@ -1402,8 +1539,10 @@ div.animation4 {
     /*FOOTER*/
 }
 
-
 @media (max-width: 374px) {
+    .header {
+        width: 100%;
+    }
     /*SERVICES*/
     .services__description__item {
         width: 100%;
@@ -1442,7 +1581,6 @@ div.animation4 {
         border: 2px solid #F06C64;
         width: 44%;
     }
-
     /*ABOUT US*/
     .about-us__container {
         padding: 33px 30px 11px 30px;
@@ -1456,7 +1594,7 @@ div.animation4 {
     .human div {
         margin-bottom: 18px;
     }
-    .human div img{
+    .human div img {
         width: 100%;
         height: 100%;
     }
@@ -1477,9 +1615,7 @@ div.animation4 {
         flex-direction: column;
         align-items: center;
     }
-
     /*GET A QUOTE*/
-
     .get-a-quote__container {
         padding: 44px 30px 38px 30px;
     }
@@ -1492,7 +1628,6 @@ div.animation4 {
     .forms {
         width: 100%;
     }
-
     .get-a-quote__text_header {
         margin-bottom: 14px;
     }
