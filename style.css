@@ -330,7 +330,7 @@ div.animation4 {
     border: 0;
     background-color: rgb(240, 108, 100);
     position: absolute;
-    top: 50%;
+    top: 47%;
     left: 4%;
     z-index: 10;
     background-size: cover;
@@ -346,7 +346,7 @@ div.animation4 {
     background-color: #f06c64;
     position: absolute;
     right: 4%;
-    top: 50%;
+    top: 47%;
     background-size: cover;
 }
 
@@ -591,6 +591,7 @@ div.animation4 {
     margin-right: 20px;
     position: relative;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .portfolio__img:hover {
@@ -607,9 +608,7 @@ div.animation4 {
 /*PORTFOLIO-IMAGES*/
 
 .image-active {
-    border: 5px solid #F06C64;
-    height: 177px;
-    width: 210px;
+    border: 5px inset #F06C64;
 }
 
 /*END PORTFOLIO-IMAGES*/
@@ -838,7 +837,7 @@ div.animation4 {
 
 .forms {
     margin-right: 21px;
-    width: 283%;
+    width: 280%;
 }
 
 #submit {
@@ -1047,20 +1046,91 @@ div.animation4 {
 }
 
 @media (max-width: 1019px) {
-    .services__description__item {
-        width: 42%;
-    }
-    .portfolio__img {
-        width: 30.5%;
-    }
+    /*HEADER*/
     .header-container {
         padding: 29px 40px 35px 40px;
     }
+    /*SLIDER*/
     .slider {
         margin-top: 90px;
     }
+    /*SERVICES*/
     .services__header {
-        padding: 40px 40px 46px 40px;
+        padding: 40px 40px 28px 40px;
+    }
+    .services__header h2 {
+        margin-bottom: 18px;
+    }
+    .services__descriptions {
+        justify-content: space-between;
+        margin-right: 74px;
+        margin: 0 74px 24px 41px;
+    }
+    .services__description__item {
+        margin-bottom: 40px;
+        margin-right: 0;
+    }
+    .services__description__item {
+        width: 42%;
+    }
+    /*PORTFOLIO*/
+    .portfolio__img {
+        width: 31.6%;
+        height: auto;
+        margin-right: 0;
+    }
+    .portfolio__container {
+        padding: 59px 41px 45px 40px;
+    }
+    .portfolio__header_head {
+        margin-bottom: 14px;
+    }
+    .portfolio__list {
+        display: flex;
+        justify-content: start;
+        margin: 12px 0 28px 1px;
+        padding: 0;
+    }
+    .portfolio__images {
+        justify-content: space-between;
+    }
+    /*ABOUT US*/
+    .about-us__container {
+        padding: 52px 40px 75px 40px;
+    }
+    .about-us__header_head {
+        margin-bottom: 14px;
+    }
+    .about-us__header {
+        margin-bottom: 28px;
+    }
+    .human div {
+        margin-bottom: 12px;
+    }
+    .human h2 {
+        margin-bottom: 5px;
+    }
+    .human p {
+        margin-bottom: 5px;
+    }
+    .human .social {
+        margin-bottom: 0;
+    }
+    /*GET A QUOTE*/
+    .get-a-quote__container {
+        padding: 53px 37px 25px 40px;
+    }
+    .get-a-quote__text_header {
+        margin-bottom: 14px;
+    }
+    .get-a-quote__text {
+        margin-bottom: 19px;
+    }
+    .form input, textarea {
+        margin-bottom: 12px;
+    }
+    .forms {
+        margin-right: 29px;
     }
 }
 
@@ -1069,25 +1139,26 @@ div.animation4 {
     .header {
         width: 768px;
     }
+    /*SLIDER*/
+    .slider1 {
+        padding: 41px 84px 43px 84px;
+    }
     .vertical-phone {
         width: 180px;
-        height: 363px;
+        height: 364px;
     }
     .horizontal-phone {
-        width: 363px;
+        width: 364px;
         height: 180px;
     }
     .vertical {
-        padding-right: 54px;
-    }
-    .slider1 {
-        padding: 53px 87px 58px 84px;
+        padding-right: 56px;
     }
     .left-arrow {
-        left: 5%;
+        left: 4%;
     }
     .right-arrow {
-        right: 5%;
+        right: 4%;
     }
     .vertical-phone_home-button {
         width: 31px;
@@ -1118,57 +1189,23 @@ div.animation4 {
         width: 546px;
         height: 342px;
     }
-    /*OUR SERVICES*/
-    .services__descriptions {
-        justify-content: space-between;
-        margin-right: 40px;
-    }
-    .services__description__item {
-        margin-bottom: 40px;
-        margin-right: 0;
-    }
     /*PORTFOLIO*/
     .portfolio__img {
         height: 183px;
         width: 216px;
     }
-    .image-active {
-        border: 3px solid #F06C64;
-        height: 173px;
-        width: 206px;
-    }
     /*ABOUT US*/
-    .about-us__container {
-        background-color: #f2f2f2;
-        padding: 52px 40px 50px 40px;
-        border-bottom: 6px #ffffff solid;
-    }
-    .about-us__header_head {
-        margin-bottom: 14px;
-    }
-    .about-us__header {
-        margin-bottom: 28px;
-    }
     .human {
         width: 219px;
-    }
-    .human div {
-        margin-bottom: 14px;
     }
     .human div img {
         height: 219px;
         width: 219px;
     }
-    .human h2 {
-        margin: 0 0 5px -1px;
-    }
-    .human p {
-        margin-bottom: 5px;
-    }
     .social a {
         margin-right: 8px;
     }
-    /**/
+    /*GET A QUOTE*/
     .get-a-quote__container {
         padding: 64px 39px 25px 37px;
     }
@@ -1266,12 +1303,18 @@ div.animation4 {
     .services__descriptions {
         margin: 0 43px 0 32px;
     }
+    .services__description__item {
+        margin-bottom: 16px;
+    }
+    .services__description__item h3 {
+        padding-bottom: 7px;
+    }
     /*PORTFOLID*/
     .portfolio__header {
         padding-right: 13px;
     }
     .portfolio__container {
-        padding: 42px 17px 28px 30px;
+        padding: 42px 30px 28px 30px;
     }
     .portfolio__header_head {
         margin-bottom: 14px;
@@ -1282,14 +1325,17 @@ div.animation4 {
         margin: 10px 0 25px 1px;
     }
     .portfolio__img {
-        width: 46%;
+        width: 48.7%;
         height: auto;
         margin-bottom: 14px;
-        margin-right: 13px;
+        margin-right: 0;
     }
     .image-active {
         border: 2px solid #F06C64;
         width: 44%;
+    }
+    .image9, .image10, .image11, .image12 {
+        display: none;
     }
     /*ABOUT US*/
     .about-us__container {
@@ -1363,6 +1409,12 @@ div.animation4 {
     .form input, textarea {
         width: 100%;
     }
+    .copyright {
+        display: none;
+    }
+    .footer__container_social {
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 375px) {
@@ -1430,33 +1482,7 @@ div.animation4 {
         height: 177px;
     }
     /*OUR SERVICES*/
-    .services__header {
-        padding: 25px 29px 25px 32px;
-    }
-    .services__header h2 {
-        margin-bottom: 18px;
-    }
-    .services__descriptions {
-        margin: 0 43px 0 32px;
-    }
-    .services__description__item {
-        margin-bottom: 15px;
-    }
-    .services__description__item h3 {
-        padding-bottom: 7px;
-    }
     /*portfolio*/
-    .portfolio__container {
-        padding: 42px 30px 28px 30px;
-    }
-    .portfolio__header_head {
-        margin-bottom: 14px;
-    }
-    .portfolio__list {
-        display: flex;
-        justify-content: start;
-        margin: 10px 0 25px 1px;
-    }
     .portfolio__img {
         height: 128px;
         width: 151px;
@@ -1475,12 +1501,6 @@ div.animation4 {
         width: 146px;
     }
     /*ABOUT US*/
-    .about-us__container {
-        padding: 33px 30px 11px 30px;
-    }
-    .about-us__header {
-        margin-bottom: 14px;
-    }
     .human {
         width: 314px;
     }

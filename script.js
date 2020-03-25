@@ -15,7 +15,7 @@ function onScroll(event) {
     }
 
     sections.forEach((item) => {
-        if (item.offsetTop <= currentPos && (item.offsetTop + item.offsetHeight) > currentPos) {
+        if ((item.offsetTop - document.querySelector('.header').offsetHeight) <= currentPos && (item.offsetTop + item.offsetHeight) > currentPos) {
             links.forEach((a) => {
                 a.classList.remove('active');
                 if (item.getAttribute('id') === a.getAttribute('href').substring(1)) {
@@ -110,7 +110,7 @@ container.addEventListener('click', (event) => {
             }
             container.querySelector('.slider2').classList.remove('animation3');
             container.querySelector('.slider1').classList.remove('animation3');
-        }, 1500);
+        }, 1000);
     }
 });
 
