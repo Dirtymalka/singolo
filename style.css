@@ -1330,10 +1330,6 @@ div.animation4 {
         margin-bottom: 14px;
         margin-right: 0;
     }
-    .image-active {
-        border: 2px solid #F06C64;
-        width: 44%;
-    }
     .image9, .image10, .image11, .image12 {
         display: none;
     }
@@ -1496,9 +1492,7 @@ div.animation4 {
         margin-right: 0;
     }
     .image-active {
-        border: 2px solid #F06C64;
-        height: 123px;
-        width: 146px;
+        border: 5px inset #F06C64;
     }
     /*ABOUT US*/
     .human {
@@ -1598,8 +1592,7 @@ div.animation4 {
         margin-right: 13px;
     }
     .image-active {
-        border: 2px solid #F06C64;
-        width: 44%;
+        border: 5px inset #F06C64;
     }
     /*ABOUT US*/
     .about-us__container {
