@@ -38,6 +38,8 @@ function onScroll(event) {
 navigation.addEventListener('click', (event) => {
     navigation.querySelectorAll('a').forEach(element => element.classList.remove('active'));
     event.target.classList.add('active');
+    document.querySelector('.navigation').classList.remove('active-burger');
+    document.querySelector('.header__navigation').classList.remove('active-burger');
 });
 
 //Disconnecting Phones
@@ -189,7 +191,7 @@ portfolioList.addEventListener('click', (event) => {
 
 const hamburger = document.querySelector('.hamburger')
 
-hamburger.addEventListener('click', () => {
+hamburger.addEventListener('click', (event) => {
     document.querySelector('.hamburger').classList.toggle('active-burger');
     document.querySelector('.hamburger-line').classList.toggle('active-burger');
     document.querySelector('.navigation').classList.toggle('active-burger');

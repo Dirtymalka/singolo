@@ -383,6 +383,9 @@ div.animation4 {
 }
 
 /*SERVICES*/
+#services {
+    scroll-margin-top: 93px;
+}
 
 .services-container {
     background-color: #f2f2f2;
@@ -485,6 +488,10 @@ div.animation4 {
     color: white;
     padding: 66px 20px 47px 40px;
     border-bottom: 6px #323746 solid;
+}
+
+#portfolio {
+    scroll-margin-top: 93px;
 }
 
 .portfolio__header_head {
@@ -614,6 +621,10 @@ div.animation4 {
 /*END PORTFOLIO-IMAGES*/
 
 /*ABOUT US*/
+
+#about-us {
+    scroll-margin-top: 93px;
+}
 
 .about-us__container {
     background-color: #f2f2f2;
@@ -749,6 +760,10 @@ div.animation4 {
 }
 
 /*GET A QOUTE*/
+
+#get-a-quote {
+    scroll-margin-top: 93px;
+}
 
 .wrapper {
     max-width: 1020px;
@@ -1189,6 +1204,9 @@ div.animation4 {
         width: 546px;
         height: 342px;
     }
+    .services__description__item p {
+        text-align: left;
+    }
     /*PORTFOLIO*/
     .portfolio__img {
         height: 183px;
@@ -1207,7 +1225,7 @@ div.animation4 {
     }
     /*GET A QUOTE*/
     .get-a-quote__container {
-        padding: 64px 39px 25px 37px;
+        padding: 53px 37px 39px 39px;
     }
     .forms {
         margin-right: 29px;
