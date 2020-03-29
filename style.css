@@ -1171,9 +1171,11 @@ div.animation4 {
     }
     .left-arrow {
         left: 4%;
+        top: 46%;
     }
     .right-arrow {
         right: 4%;
+        top: 46%;
     }
     .vertical-phone_home-button {
         width: 31px;
@@ -1450,14 +1452,14 @@ div.animation4 {
         padding-right: 26px;
     }
     .left-arrow {
-        top: 41%;
+        top: 44%;
         left: 3%;
         width: 14px;
         height: 24px;
         background-size: cover;
     }
     .right-arrow {
-        top: 41%;
+        top: 44%;
         right: 3%;
         width: 14px;
         height: 24px;

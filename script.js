@@ -40,6 +40,8 @@ navigation.addEventListener('click', (event) => {
     event.target.classList.add('active');
     document.querySelector('.navigation').classList.remove('active-burger');
     document.querySelector('.header__navigation').classList.remove('active-burger');
+    document.querySelector('.hamburger').classList.remove('active-burger');
+    document.querySelector('.hamburger-line').classList.remove('active-burger');
 });
 
 //Disconnecting Phones
